@@ -8,15 +8,19 @@ int main(void){
     printf("n = ");
     scanf("%d", &n);
 
-    int max,min;
-    int len = m;
-    if(m>n){
-        len = n;
+    int max = m, min = n;
+    if(max<min){
+        max = n;
+        min = m;
     }
-    // for(int i=0;i)
     
-
-    
+    for(int i=max;i<=min*max;i++){
+        if(i%max==0 & i%min==0){
+            printf("LCM = %d\n", i);
+            printf("GCD = %d", min * max / i);
+            break;
+        }
+    }
 
     return 0;
 }
